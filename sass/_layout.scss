@@ -1,9 +1,14 @@
 .container {
-    max-width: 90vw;
+    max-width: 120rem;
     margin: 5rem auto;
     background-color: var(--grey-light-1);
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, .5);
     min-height: 50rem;
+
+    @media screen and (max-width: 1200px) {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
 .header {
@@ -14,10 +19,19 @@
     justify-content: space-between;
     align-items: center;
     background-color: bisque;
+
+    @media screen and (max-width: 960px) {
+        flex-wrap: wrap;
+        height: 12rem;
+     }
 }
 
 .content {
     display: flex;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -41,6 +55,14 @@
     padding: 4.5rem;
     // border-bottom: var(--border-line);
     font-size: 1.4rem;
+
+    @media screen and (max-width: 960px) {
+        padding: 3rem;
+    }
+
+    @media screen and (max-width: 660px) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -53,6 +75,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @media screen and (max-width: 960px) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media screen and (max-width: 660px) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
     
 }
 

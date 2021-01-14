@@ -10,6 +10,11 @@
     align-items: center;
     flex: 0 0 40%;
 
+    @media screen and (max-width: 960px) {
+        order: 1;
+        flex: 0 0 100%;
+     }
+
     &__input {
         font-family: inherit;
         font-size: 1.4rem;
@@ -28,6 +33,10 @@
             appearance: none;
             border: none;
             outline-style: none;
+
+            @media screen and (max-width: 960px) {
+                width: 80%;
+             }
         }
     }
 
@@ -110,12 +119,25 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+
+    @media screen and (max-width: 960px) {
+        display: flex;
+        margin: 0;
+    }
     
     &__item {
         position: relative;
 
+        @media screen and (max-width: 960px) {
+            flex: 1;
+        }
+
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media screen and (max-width: 960px) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -153,6 +175,15 @@
         align-items: center;
         position: relative;
         z-index: 100;
+
+        @media screen and (max-width: 960px) {
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            padding: 1.2rem;
+        }
     }
 
     &__icon {
@@ -160,6 +191,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media screen and (max-width: 660px) {
+            margin: auto;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-bottom: .5rem;
+        }
     }
 }
 
@@ -168,6 +206,10 @@
     padding: 2rem;
     text-align: center;
     color: var(--grey-light-4);
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 }
 
 .gallery {
@@ -194,6 +236,11 @@
         color: var(--grey-dark-1);
         padding: 1.5rem 3rem;
         text-transform: uppercase;
+
+        @media screen and (max-width: 960px) {
+            font-size: 1.75rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -228,15 +275,27 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 960px) {
+            padding: 0 1.25rem;
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
+
+        @media screen and (max-width: 960px) {
+           font-size: 1.75rem;
+        }
     }
 
     &__rating-count {
         font-size: 1.2rem;
+
+        @media screen and (max-width: 960px) {
+            font-size: 1rem;
+         }
     }
 }
 
@@ -339,6 +398,11 @@
     padding: 3rem;
     margin-bottom: 3.5rem;
 
+    @media screen and (max-width: 960px) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
     &__text {
         margin-bottom: 2rem;
         position: relative;
@@ -398,6 +462,10 @@
     background-color: #fff;
     text-align: center;
     padding: 3.5rem 0;
+
+    @media screen and (max-width: 960px) {
+        padding: 2rem 0;
+    }
 
     &__book-now {
         font-size: 1.5rem;
